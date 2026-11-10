@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="A digital archive celebrating the life, photography and legacy of Ghanaian photographer James Barnor.">
+<title>James Barnor — A Life Behind the Lens</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+:root{--ink:#171714;--paper:#f1eee6;--cream:#e5dfd1;--gold:#b89556;--muted:#8b877d;--line:rgba(23,23,20,.16);--white:#fbfaf6}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:'DM Sans',sans-serif}a{color:inherit}button{font:inherit}.mono{font-family:'DM Mono',monospace;text-transform:uppercase;letter-spacing:.12em;font-size:.68rem}.serif{font-family:'Playfair Display',serif}.wrap{width:min(1180px,calc(100% - 48px));margin:auto}.topbar{height:72px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);position:absolute;z-index:5;top:0;left:0;width:100%;padding:0 max(24px,calc((100vw - 1180px)/2));color:white}.brand{font-family:'Playfair Display',serif;font-size:1.2rem;letter-spacing:.04em}.nav{display:flex;gap:26px}.nav a{text-decoration:none;font-size:.78rem;color:rgba(255,255,255,.78)}.nav a:hover{color:white}.menu{display:none;background:none;border:0;color:white;font-size:1.4rem}
+.hero{min-height:720px;background:#222 url('https://autograph.org.uk/Content/Images/EditorImages/blog%2Fjames%20barnor%2091%2Fjames-barnor-autograph-1.jpg') center 38%/cover no-repeat;position:relative;display:flex;align-items:end;color:white}.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,10,9,.82),rgba(10,10,9,.18) 75%),linear-gradient(0deg,rgba(10,10,9,.72),transparent 65%)}.hero-content{position:relative;padding:170px 0 90px;max-width:780px}.eyebrow{color:#d7bd8b}.hero h1{font:500 clamp(4rem,10vw,8.6rem)/.88 'Playfair Display',serif;letter-spacing:-.055em;margin:22px 0}.hero p{font-size:1.05rem;line-height:1.8;color:rgba(255,255,255,.8);max-width:560px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 20px;text-decoration:none;border:1px solid rgba(255,255,255,.5);font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;transition:.25s}.btn.primary{background:var(--gold);border-color:var(--gold);color:#171714}.btn:hover{transform:translateY(-3px);background:white;color:#171714;border-color:white}
+.intro-strip{background:var(--ink);color:var(--paper);padding:26px 0}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.stat{border-right:1px solid rgba(255,255,255,.18);padding-left:18px}.stat:first-child{padding-left:0}.stat:last-child{border:0}.stat strong{font:500 2rem 'Playfair Display',serif;display:block;color:#d4b77f}.stat span{font-size:.72rem;color:#c0bbae}
+section{padding:110px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:48px}.section-head h2{font:500 clamp(2.6rem,5vw,4.5rem)/1 'Playfair Display',serif;letter-spacing:-.04em;margin:12px 0 0}.section-head p{max-width:390px;color:#68665f;line-height:1.7;font-size:.9rem}.kicker{color:#9b7740}
+.bio-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:70px;align-items:center}.bio-photo{min-height:540px;background:url('https://fomu.be/uploads/resized/uploads/1120741/62a7c8ac-06dd-4b8c-9f2e-53a2b04be33b_dc1bd712af440e07dc6db1f812e3c70a.jpeg') center/cover;position:relative}.photo-note{position:absolute;bottom:18px;left:18px;background:var(--paper);padding:12px 15px;font-size:.7rem}.bio-copy h3{font:500 2.3rem/1.15 'Playfair Display',serif;margin:0 0 20px}.bio-copy p{line-height:1.85;color:#5f5d56;font-size:.95rem}.pullquote{font:italic 1.55rem/1.4 'Playfair Display',serif;border-left:2px solid var(--gold);padding:8px 0 8px 24px;margin:32px 0;color:#51432d}
+.timeline{background:var(--cream)}.timeline-list{border-top:1px solid var(--line)}.event{display:grid;grid-template-columns:130px 1fr 2fr;gap:24px;padding:25px 0;border-bottom:1px solid var(--line);align-items:start}.event-year{font:500 1.5rem 'Playfair Display',serif;color:#987644}.event h3{font-size:1rem;margin:0 0 7px}.event p{margin:0;color:#68665f;line-height:1.65;font-size:.88rem}
+.achievement-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}.achievement{background:var(--paper);padding:30px;min-height:210px}.achievement .num{color:#a17e47}.achievement h3{font:500 1.4rem 'Playfair Display',serif;margin:20px 0 10px}.achievement p{color:#68665f;line-height:1.65;font-size:.85rem;margin:0}
+.gallery{background:#1d1d1a;color:var(--paper)}.gallery .section-head p{color:#b9b5aa}.gallery .kicker{color:#c8a56d}.filters{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:28px}.filter{border:1px solid rgba(255,255,255,.25);background:transparent;color:#d8d4c9;padding:10px 15px;cursor:pointer;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase}.filter.active,.filter:hover{background:var(--gold);border-color:var(--gold);color:#171714}.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.gallery-card{background:#292925;cursor:pointer;overflow:hidden;transition:.3s}.gallery-card:hover{transform:translateY(-5px)}.gallery-card.hidden{display:none}.gallery-card img{width:100%;height:310px;object-fit:cover;display:block;filter:saturate(.82);transition:.5s}.gallery-card:hover img{transform:scale(1.035)}.gallery-info{padding:18px}.gallery-info .mono{color:#c4a36b}.gallery-info h3{font:500 1.2rem 'Playfair Display',serif;margin:8px 0}.gallery-info p{color:#aaa79d;font-size:.78rem;line-height:1.55;margin:0}.gallery-note{font-size:.72rem;color:#aaa79d;margin-top:22px;line-height:1.6}
+.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:20;align-items:center;justify-content:center;padding:24px}.modal.open{display:flex}.modal-inner{max-width:1000px;width:100%;display:grid;grid-template-columns:1.4fr 1fr;background:#222;color:#eee}.modal img{width:100%;height:min(75vh,700px);object-fit:contain;background:#111}.modal-copy{padding:36px;align-self:center}.modal-copy h3{font:500 2rem 'Playfair Display',serif}.modal-copy p{color:#bbb;line-height:1.7}.modal-close{position:absolute;top:22px;right:28px;background:none;border:0;color:white;font-size:2rem;cursor:pointer}
+.honours{background:var(--cream)}.honour-list{display:grid;grid-template-columns:1fr 1fr;gap:0 60px}.honour{padding:24px 0;border-top:1px solid var(--line);display:grid;grid-template-columns:70px 1fr;gap:20px}.honour-year{font:500 1.4rem 'Playfair Display',serif;color:#9a7846}.honour h3{margin:0 0 7px;font:500 1.15rem 'Playfair Display',serif}.honour p{margin:0;color:#68665f;font-size:.83rem;line-height:1.6}
+.legacy-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:65px;align-items:center}.legacy-grid h2{font:500 clamp(2.5rem,5vw,4rem)/1.05 'Playfair Display',serif;margin:12px 0 24px}.legacy-grid p{color:#68665f;line-height:1.8}.legacy-image{height:440px;background:url('https://vanda-production-assets.s3.amazonaws.com/2022/06/25/09/19/49/0215a174-3d47-4ba3-a6ff-24779874881e/Barnor5.jpg') center/cover}
+.sources{background:#e3ded2;padding:65px 0}.source-list{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.source-list a{font-size:.8rem;line-height:1.5;text-decoration:none;border-bottom:1px solid var(--line);padding:14px 0}.source-list a:hover{color:#8e6b36}
+footer{background:#171714;color:#e8e3d8;padding:45px 0}.footer-inner{display:flex;justify-content:space-between;gap:30px;align-items:center}.footer-title{font:500 2rem 'Playfair Display',serif}.footer-note{color:#aaa79d;font-size:.72rem;line-height:1.6;max-width:430px}
+@media(max-width:800px){.nav{display:none;position:absolute;top:72px;left:0;right:0;background:#171714;padding:20px 24px;flex-direction:column}.nav.open{display:flex}.menu{display:block}.hero{min-height:650px}.stats{grid-template-columns:repeat(2,1fr)}.stat:nth-child(2){border:0}.bio-grid,.legacy-grid{grid-template-columns:1fr;gap:35px}.bio-photo{min-height:420px}.event{grid-template-columns:80px 1fr;gap:12px}.event p{grid-column:2}.achievement-grid{grid-template-columns:1fr 1fr}.gallery-grid{grid-template-columns:1fr 1fr}.gallery-card img{height:250px}.honour-list{grid-template-columns:1fr}.modal-inner{grid-template-columns:1fr;max-height:90vh;overflow:auto}.modal img{height:45vh}.source-list{grid-template-columns:1fr 1fr}.section-head{display:block}.section-head p{margin-top:18px}}
+@media(max-width:520px){.wrap{width:min(100% - 32px,1180px)}section{padding:75px 0}.hero h1{font-size:4rem}.achievement-grid,.gallery-grid,.source-list{grid-template-columns:1fr}.gallery-card img{height:300px}.event{grid-template-columns:68px 1fr}.footer-inner{display:block}.footer-note{margin-top:18px}.stat strong{font-size:1.7rem}}
+
+/* ===== PREMIUM GLASS / MOTION UPGRADE ===== */
+:root{--glass:rgba(255,255,255,.105);--glass-border:rgba(255,255,255,.23);--glow:rgba(196,157,91,.22)}
+body{overflow-x:hidden}
+.topbar{position:fixed;height:78px;padding-top:0;padding-bottom:0;background:rgba(18,18,16,.13);border-bottom:1px solid rgba(255,255,255,.16);backdrop-filter:blur(18px) saturate(145%);-webkit-backdrop-filter:blur(18px) saturate(145%);transition:background .35s,box-shadow .35s,height .35s}
+.topbar.scrolled{height:68px;background:rgba(20,20,18,.78);box-shadow:0 12px 40px rgba(0,0,0,.18)}
+.nav a{padding:10px 13px;border:1px solid transparent;border-radius:999px;transition:.25s}
+.nav a:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.2);backdrop-filter:blur(12px)}
+.hero{isolation:isolate;background-attachment:fixed}
+.hero:after{content:"";position:absolute;z-index:-1;width:420px;height:420px;border-radius:50%;right:8%;top:17%;background:radial-gradient(circle,rgba(202,166,105,.22),rgba(202,166,105,0) 68%);filter:blur(10px);pointer-events:none;animation:orbFloat 10s ease-in-out infinite alternate}
+.hero-content{animation:heroEnter 1.1s cubic-bezier(.2,.7,.2,1) both}
+.hero h1{text-shadow:0 10px 45px rgba(0,0,0,.22)}
+.btn{border-radius:999px;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.btn:not(.primary){background:rgba(255,255,255,.08)}
+.btn.primary{box-shadow:0 8px 28px rgba(184,149,86,.24)}
+.intro-strip{position:relative;overflow:hidden;background:linear-gradient(115deg,#171714,#25231d 55%,#171714)}
+.intro-strip:after{content:"";position:absolute;width:320px;height:320px;border-radius:50%;right:-100px;top:-220px;background:rgba(184,149,86,.12);filter:blur(30px)}
+.stat{position:relative;z-index:1}
+.achievement-grid{background:transparent;border:0;gap:14px}
+.achievement{border:1px solid rgba(40,35,25,.1);border-radius:20px;background:rgba(255,255,255,.46);box-shadow:0 8px 30px rgba(42,35,23,.045);transition:transform .35s,box-shadow .35s,border-color .35s;backdrop-filter:blur(10px)}
+.achievement:hover{transform:translateY(-7px);box-shadow:0 18px 45px rgba(42,35,23,.1);border-color:rgba(184,149,86,.4)}
+.event{transition:padding .25s,background .25s;border-radius:10px;padding-left:12px;padding-right:12px}
+.event:hover{background:rgba(255,255,255,.38);padding-left:20px}
+.gallery-card{border:1px solid rgba(255,255,255,.1);border-radius:15px;background:rgba(255,255,255,.055);box-shadow:0 12px 35px rgba(0,0,0,.15);transition:transform .4s,box-shadow .4s,border-color .4s}
+.gallery-card:hover{transform:translateY(-8px);box-shadow:0 24px 55px rgba(0,0,0,.34);border-color:rgba(211,178,121,.45)}
+.gallery-card img{transition:transform .75s cubic-bezier(.2,.7,.2,1),filter .5s}
+.gallery-card:hover img{transform:scale(1.07);filter:saturate(1.08)}
+.gallery-info{position:relative}
+.filter{border-radius:999px;backdrop-filter:blur(10px);transition:background .25s,transform .25s}
+.filter:hover{transform:translateY(-2px)}
+.modal{backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+.modal-inner{border:1px solid rgba(255,255,255,.2);border-radius:20px;overflow:hidden;box-shadow:0 30px 100px rgba(0,0,0,.5);background:rgba(35,35,31,.88);backdrop-filter:blur(24px)}
+.modal-copy{padding:clamp(22px,4vw,48px)}
+.honour{transition:transform .3s;padding-left:8px}.honour:hover{transform:translateX(7px)}
+.honour h3{transition:color .25s}.honour:hover h3{color:#99733d}
+.bio-photo,.legacy-image{border-radius:4px 80px 4px 4px;box-shadow:18px 18px 0 rgba(184,149,86,.16);overflow:hidden}
+.photo-note{border-radius:10px;background:rgba(248,245,237,.83);backdrop-filter:blur(14px);box-shadow:0 10px 35px rgba(0,0,0,.12)}
+.pullquote{position:relative}
+.sources{background:linear-gradient(135deg,#e7e1d4,#f1eee6)}
+.source-list a{transition:padding .25s,color .25s}.source-list a:hover{padding-left:8px}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.gallery-card.reveal{transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1),box-shadow .4s,border-color .4s}
+.scroll-progress{position:fixed;z-index:30;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,#92703e,#e2c58f);box-shadow:0 0 12px rgba(226,197,143,.7)}
+.back-top{position:fixed;z-index:10;right:24px;bottom:24px;width:46px;height:46px;border:1px solid rgba(255,255,255,.24);border-radius:50%;background:rgba(25,25,22,.72);color:#f5ead6;backdrop-filter:blur(16px);font-size:1.2rem;cursor:pointer;opacity:0;transform:translateY(12px);pointer-events:none;transition:.3s;box-shadow:0 8px 25px rgba(0,0,0,.18)}
+.back-top.show{opacity:1;transform:translateY(0);pointer-events:auto}.back-top:hover{background:#b89556;color:#171714;transform:translateY(-4px)}
+::selection{background:#b89556;color:#171714}
+@keyframes heroEnter{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+@keyframes orbFloat{from{transform:translate3d(0,0,0) scale(1)}to{transform:translate3d(-35px,28px,0) scale(1.12)}}
+@media(max-width:800px){.topbar{background:rgba(20,20,18,.5)}.nav{background:rgba(20,20,18,.88);backdrop-filter:blur(22px);border-bottom:1px solid rgba(255,255,255,.15)}.hero{background-attachment:scroll}.achievement-grid{grid-template-columns:1fr 1fr}.hero:after{width:250px;height:250px;right:-60px;top:25%}}
+@media(max-width:520px){.achievement-grid{grid-template-columns:1fr}.back-top{right:15px;bottom:15px}.bio-photo,.legacy-image{border-top-right-radius:48px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
+
+</style>
+</head>
+<body>
+<div class="scroll-progress" id="scrollProgress"></div>
+<button class="back-top" id="backTop" aria-label="Back to top">↑</button>
+<header class="topbar">
+  <a class="brand" href="#home" style="text-decoration:none">JAMES BARNOR<span style="color:#d2b579">.</span></a>
+  <nav class="nav" id="nav"><a href="#biography">BIOGRAPHY</a><a href="#timeline">TIMELINE</a><a href="#gallery">GALLERY</a><a href="#achievements">ACHIEVEMENTS</a><a href="#honours">HONOURS</a></nav>
+  <button class="menu" id="menu" aria-label="Open navigation">☰</button>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="wrap hero-content">
+    <div class="mono eyebrow">GHANAIAN PHOTOGRAPHER · BORN 1929</div>
+    <h1>JAMES<br>BARNOR</h1>
+    <div class="serif" style="font-size:1.5rem;color:#e2c58f">A Life Behind the Lens</div>
+    <p>From the streets of Jamestown to the energy of 1960s London, James Barnor photographed people, culture and a world in transformation.</p>
+    <div class="hero-actions"><a class="btn primary" href="#gallery">Explore the archive</a><a class="btn" href="#biography">Discover his story</a></div>
+  </div>
+</section>
+
+<div class="intro-strip"><div class="wrap stats">
+  <div class="stat"><strong>1929</strong><span>Born in Accra, Ghana</span></div>
+  <div class="stat"><strong>1949</strong><span>Ever Young Studio established</span></div>
+  <div class="stat"><strong>1957</strong><span>Ghana's independence</span></div>
+  <div class="stat"><strong>70+ years</strong><span>Photographic practice</span></div>
+</div></div>
+
+<section id="biography"><div class="wrap">
+  <div class="section-head"><div><div class="mono kicker">01 / THE PHOTOGRAPHER</div><h2 class="serif">A life in pictures.</h2></div><p>More than a photographer, Barnor became a witness to social change — recording everyday lives as well as moments that entered history.</p></div>
+  <div class="bio-grid">
+    <div class="bio-photo"><div class="photo-note mono">Ever Young Graphic Studio · Jamestown, Accra · 1956</div></div>
+    <div class="bio-copy">
+      <h3>From Accra, to London, and back again.</h3>
+      <p>James Barnor was born in Accra, Ghana, in 1929. He received his first camera, a Kodak Baby Brownie, as a teenager. What began as curiosity became a lifelong commitment to photography.</p>
+      <p>After learning the craft through an apprenticeship, Barnor opened Ever Young Studio in Jamestown in 1949. The studio became a place where people came to be photographed, meet and share stories. His portraits captured the confidence, style and aspirations of a society moving towards independence.</p>
+      <p>He also worked as a photojournalist and became the first staff photographer of the <em>Daily Graphic</em>. His camera documented public life and important personalities during a defining period in Ghana's history.</p>
+      <p>In 1959, Barnor moved to London to develop his technical skills. He studied photography and worked for <em>DRUM</em> magazine, photographing fashion, culture and the African diaspora. In 1970, he returned to Ghana and helped establish a colour-processing laboratory, continuing his work at Studio X23.</p>
+      <p>He returned to London in 1994. His archive, spanning Ghana and Britain, is now recognised internationally for its historical, cultural and artistic importance.</p>
+      <div class="pullquote">“The future is going to be grander because of photography.”</div>
+      <div class="mono" style="color:#92703e">— JAMES BARNOR · QUOTED BY MoMA</div>
+    </div>
+  </div>
+</div></section>
+
+<section class="timeline" id="timeline"><div class="wrap">
+  <div class="section-head"><div><div class="mono kicker">02 / THE JOURNEY</div><h2 class="serif">A timeline of a life.</h2></div><p>Key dates and turning points in a career that connected Ghana, Britain and the wider world.</p></div>
+  <div class="timeline-list">
+    <div class="event"><div class="event-year">1929</div><div><h3>Born in Accra</h3></div><p>James Barnor is born in Ghana, then under British colonial rule.</p></div>
+    <div class="event"><div class="event-year">c. 1945–46</div><div><h3>First camera</h3></div><p>As a teenager, he receives a Kodak Baby Brownie camera and begins exploring photography.</p></div>
+    <div class="event"><div class="event-year">1949</div><div><h3>Ever Young Studio</h3></div><p>He opens Ever Young Studio in Jamestown, Accra, building a portrait practice at a time of rapid social change.</p></div>
+    <div class="event"><div class="event-year">1950</div><div><h3>Daily Graphic</h3></div><p>Barnor becomes the newspaper's first staff photographer, documenting people, events and public figures.</p></div>
+    <div class="event"><div class="event-year">1957</div><div><h3>Ghana becomes independent</h3></div><p>His photographs record the atmosphere and personalities surrounding Ghana's independence on 6 March.</p></div>
+    <div class="event"><div class="event-year">1959</div><div><h3>Moves to London</h3></div><p>He relocates to Britain to deepen his technical knowledge and studies at Medway College of Art.</p></div>
+    <div class="event"><div class="event-year">1960s</div><div><h3>DRUM magazine</h3></div><p>He photographs fashion, models and everyday life in London, helping create a vivid record of the African diaspora.</p></div>
+    <div class="event"><div class="event-year">1970</div><div><h3>Returns to Ghana</h3></div><p>He helps establish a colour-processing laboratory in Ghana and continues working from Studio X23.</p></div>
+    <div class="event"><div class="event-year">1994</div><div><h3>Returns to London</h3></div><p>Barnor settles in London, where renewed attention later brings his archive to wider international audiences.</p></div>
+    <div class="event"><div class="event-year">2021–24</div><div><h3>International retrospectives</h3></div><p>Major exhibitions in London, Lugano, Arles, Detroit and Antwerp, followed by the James Barnor 95 Festival in Ghana.</p></div>
+  </div>
+</div></section>
+
+<section class="gallery" id="gallery"><div class="wrap">
+  <div class="section-head"><div><div class="mono kicker">03 / THE ARCHIVE</div><h2 class="serif">A country. A city.<br>Many stories.</h2></div><p>Explore selected photographs across the different chapters of Barnor's career. Choose a period to filter the archive, then open an image to read its story.</p></div>
+  <div class="filters" role="group" aria-label="Filter photographs">
+    <button class="filter active" data-filter="all">All photographs</button>
+    <button class="filter" data-filter="before">Before independence · to 1956</button>
+    <button class="filter" data-filter="independence">Independence era · 1957–1959</button>
+    <button class="filter" data-filter="after">After independence · 1960 onwards</button>
+  </div>
+  <div class="gallery-grid" id="galleryGrid">
+    <article class="gallery-card" data-period="before" data-title="Everything in My Hand I Bring" data-year="c. 1953" data-desc="A mother and child pose in Ever Young Studio in Accra. The portrait reflects Barnor's careful attention to clothing, identity and the dignity of everyday people." data-credit="Victoria and Albert Museum / James Barnor">
+      <img src="https://vanda-production-assets.s3.amazonaws.com/2022/06/25/09/13/02/1ae983b0-b0eb-4216-ae9f-6be4e1cc9560/Barnor2.jpg" alt="Mother and child photographed at Ever Young Studio">
+      <div class="gallery-info"><div class="mono">ACCRA · c. 1953</div><h3>Everything in My Hand I Bring</h3><p>Studio portraiture · Pre-independence Ghana</p></div>
+    </article>
+    <article class="gallery-card" data-period="before" data-title="Ever Young Graphic Studio" data-year="1956" data-desc="The Ever Young Graphic Studio in Jamestown, Accra. The building stood in a lively neighbourhood as Ghana moved towards independence." data-credit="FOMU Antwerp / James Barnor">
+      <img src="https://fomu.be/uploads/resized/uploads/1120741/62a7c8ac-06dd-4b8c-9f2e-53a2b04be33b_dc1bd712af440e07dc6db1f812e3c70a.jpeg" alt="Exterior of Ever Young Graphic Studio in Jamestown">
+      <div class="gallery-info"><div class="mono">JAMESTOWN · 1956</div><h3>Ever Young Graphic Studio</h3><p>The studio at the heart of a changing Accra</p></div>
+    </article>
+    <article class="gallery-card" data-period="independence" data-title="Independence Celebrations" data-year="1957" data-desc="A scene from the independence period in Accra, showing Kwame Nkrumah and the Duchess of Kent during an official ceremony. The photograph belongs to Barnor's record of a nation entering a new era." data-credit="James Barnor / image via Artsy">
+      <img src="https://d7hftxdivxxvm.cloudfront.net/?height=797&quality=50&resize_to=fit&src=https%3A%2F%2Fd32dm0rphc51dk.cloudfront.net%2F7-mNvdaUWOX2ISnXjXsiCg%2Fnormalized.jpg&width=800" alt="Independence era ceremony in Accra">
+      <div class="gallery-info"><div class="mono">ACCRA · 1957</div><h3>Independence Celebrations</h3><p>Ghana's transition to independence</p></div>
+    </article>
+    <article class="gallery-card" data-period="after" data-title="Eva, London" data-year="1960s" data-desc="A portrait of Eva in London. Barnor's photographs for DRUM helped document Black style, beauty and the cultural life of the African diaspora in Britain." data-credit="Detroit Institute of Arts / James Barnor">
+      <img src="https://dia.org/sites/default/files/styles/resource_image/public/2024-04/E2022.66.jpg.webp?itok=z4qFYNhY" alt="Portrait of Eva in London in the 1960s">
+      <div class="gallery-info"><div class="mono">LONDON · 1960s</div><h3>Eva, London</h3><p>Portraiture and Black style in the DRUM era</p></div>
+    </article>
+    <article class="gallery-card" data-period="after" data-title="Drum Cover Girl in Kilburn" data-year="1966" data-desc="A fashion portrait in London during the 1960s. Barnor's editorial work for DRUM brought African and diasporic style into international view." data-credit="Serpentine Galleries / James Barnor">
+      <img src="https://d37zoqglehb9o7.cloudfront.net/uploads/2021/05/92_ABP780-1001x1001.jpg" alt="Young woman leaning against a car in London">
+      <div class="gallery-info"><div class="mono">LONDON · 1966</div><h3>Drum Cover Girl in Kilburn</h3><p>Fashion, identity and the swinging sixties</p></div>
+    </article>
+    <article class="gallery-card" data-period="after" data-title="Shop Assistant with Colour Guide" data-year="1971" data-desc="A shop assistant poses with coloured containers outside the Agfa-Gevaert laboratory in Accra. The photograph began as a colour test and became a striking image associated with Barnor's role in expanding access to colour photography in Ghana." data-credit="Victoria and Albert Museum / James Barnor">
+      <img src="https://vanda-production-assets.s3.amazonaws.com/2022/06/25/09/19/49/0215a174-3d47-4ba3-a6ff-24779874881e/Barnor5.jpg" alt="Shop assistant with coloured containers in Accra">
+      <div class="gallery-info"><div class="mono">ACCRA · 1971</div><h3>Shop Assistant with Colour Guide</h3><p>Colour photography and Studio X23 era</p></div>
+    </article>
+    <article class="gallery-card" data-period="after" data-title="Portrait at Studio X23" data-year="c. 1975" data-desc="A portrait made outside Studio X23 in Accra. Barnor continued to photograph the people, fashion and everyday scenes of Ghana after returning from London." data-credit="OpenEdition / James Barnor">
+      <img src="https://journals.openedition.org/sources/docannexe/image/1134/img-14-small580.jpg" alt="Woman seated outside Studio X23">
+      <div class="gallery-info"><div class="mono">ACCRA · c. 1975</div><h3>Portrait at Studio X23</h3><p>Post-independence Ghana</p></div>
+    </article>
+    <article class="gallery-card" data-period="after" data-title="James Barnor in Ever Young Studio" data-year="1990s portrait" data-desc="A later portrait of Barnor in the studio setting associated with his early photographic practice. The familiar backdrop recalls the beginnings of a remarkable career." data-credit="Autograph ABP / James Barnor">
+      <img src="https://autograph.org.uk/Content/Images/EditorImages/blog%2Fjames%20barnor%2091%2Fjames-barnor-autograph-1.jpg" alt="James Barnor seated in traditional cloth in a studio">
+      <div class="gallery-info"><div class="mono">STUDIO PORTRAIT</div><h3>James Barnor in Ever Young Studio</h3><p>The photographer in his own frame</p></div>
+    </article>
+  </div>
+  <p class="gallery-note">Image credits and dates are provided where identified by the holding institution or archive. These photographs remain the property of their respective copyright holders. This educational tribute site does not claim ownership. Some images are hosted by museums, galleries or publishers; use their original pages for full catalogue records and permissions.</p>
+</div></section>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Photograph details">
+  <button class="modal-close" id="closeModal" aria-label="Close">×</button>
+  <div class="modal-inner"><img id="modalImg" src="" alt=""><div class="modal-copy"><div class="mono kicker" id="modalYear"></div><h3 id="modalTitle"></h3><p id="modalDesc"></p><p class="mono" id="modalCredit"></p></div></div>
+</div>
+
+<section id="achievements"><div class="wrap">
+  <div class="section-head"><div><div class="mono kicker">04 / CONTRIBUTIONS</div><h2 class="serif">More than a camera.</h2></div><p>Barnor's contribution is visible in the photographs he made, the photographic practices he helped develop and the histories he preserved.</p></div>
+  <div class="achievement-grid">
+    <article class="achievement"><div class="mono num">01 / STUDIO</div><h3>Ever Young Studio</h3><p>Established in Jamestown, Accra, in 1949. It became a portrait studio and a lively social space for people in the community.</p></article>
+    <article class="achievement"><div class="mono num">02 / PHOTOJOURNALISM</div><h3>Daily Graphic</h3><p>Served as the newspaper's first staff photographer, documenting public life and important figures in Ghana.</p></article>
+    <article class="achievement"><div class="mono num">03 / HISTORY</div><h3>Independence record</h3><p>Photographed Ghana's transition to independence, preserving visual records of people and events around 1957.</p></article>
+    <article class="achievement"><div class="mono num">04 / EDITORIAL</div><h3>DRUM magazine</h3><p>Created fashion and documentary images that captured Black life, style and the African diaspora in 1960s Britain.</p></article>
+    <article class="achievement"><div class="mono num">05 / TECHNOLOGY</div><h3>Colour processing</h3><p>Helped establish Ghana's first colour-processing laboratory after returning in 1970, broadening access to colour photography.</p></article>
+    <article class="achievement"><div class="mono num">06 / ARCHIVE</div><h3>A visual record</h3><p>Built an extensive body of work across Ghana and Britain, documenting social change through portrait, street and fashion photography.</p></article>
+  </div>
+</div></section>
+
+<section class="honours" id="honours"><div class="wrap">
+  <div class="section-head"><div><div class="mono kicker">05 / RECOGNITION</div><h2 class="serif">Honours &amp; exhibitions.</h2></div><p>His work is now held, studied and exhibited by leading cultural institutions around the world.</p></div>
+  <div class="honour-list">
+    <article class="honour"><div class="honour-year">2020</div><div><h3>Honorary Fellowship</h3><p>Recognised by the Royal Photographic Society for his contribution to photography.</p></div></article>
+    <article class="honour"><div class="honour-year">2021</div><div><h3>Accra/London: A Retrospective</h3><p>A major retrospective at Serpentine Galleries in London, curated by Hans Ulrich Obrist.</p></div></article>
+    <article class="honour"><div class="honour-year">2022</div><div><h3>MASI Lugano &amp; LUMA Arles</h3><p>His work featured in major exhibitions in Switzerland and France, including Stories: Pictures from the Archive (1947–1987).</p></div></article>
+    <article class="honour"><div class="honour-year">2023</div><div><h3>Detroit Institute of Arts</h3><p>Accra/London: A Retrospective brought his work to a major US museum audience.</p></div></article>
+    <article class="honour"><div class="honour-year">2023</div><div><h3>FOMU Antwerp</h3><p>Studio of Life opened in Belgium, examining the breadth of his photographic practice.</p></div></article>
+    <article class="honour"><div class="honour-year">2024</div><div><h3>James Barnor 95 Festival</h3><p>A month-long celebration of his legacy and Ghana's cultural scene in Accra and Tamale.</p></div></article>
+    <article class="honour"><div class="honour-year">2027</div><div><h3>Outstanding Contribution to Photography</h3><p>Named by the World Photography Organisation for the 2027 Sony World Photography Awards programme; a retrospective is announced for Somerset House in April 2027.</p></div></article>
+  </div>
+  <p class="mono" style="color:#8e6d3e;margin-top:28px">SELECTED RECOGNITION · NOT AN EXHAUSTIVE LIST</p>
+</div></section>
+
+<section><div class="wrap legacy-grid">
+  <div><div class="mono kicker">06 / THE LEGACY</div><h2>He photographed a changing world — and made sure it would be remembered.</h2><p>James Barnor's archive is a record of ordinary people and extraordinary transitions. His portraits show how people wished to be seen; his documentary photographs reveal the energy of cities and communities; his fashion images capture changing ideas of style and identity.</p><p>His work matters because it places Ghanaian lives and African diasporic experiences at the centre of photographic history. It reminds us that history is not only made by leaders and major events. It is also made by families, workers, young people, artists and communities.</p><p>His photographs continue to inspire new generations of photographers and viewers.</p></div>
+  <div class="legacy-image" role="img" aria-label="James Barnor's colour photography work"></div>
+</div></section>
+
+<section class="sources"><div class="wrap">
+  <div class="mono kicker">RESEARCH & IMAGE REFERENCES</div>
+  <h2 class="serif" style="font-size:2.5rem;margin:12px 0 25px">Explore the original archives.</h2>
+  <div class="source-list">
+    <a href="https://www.jamesbarnor.org/info/" target="_blank" rel="noopener">James Barnor — official biography, exhibitions and collections ↗</a>
+    <a href="https://www.vam.ac.uk/articles/james-barnor/" target="_blank" rel="noopener">Victoria &amp; Albert Museum — Studio, street and style ↗</a>
+    <a href="https://www.moma.org/artists/133563-james-barnor" target="_blank" rel="noopener">MoMA — James Barnor artist page ↗</a>
+    <a href="https://www.serpentinegalleries.org/watch/james-barnor-photography-is-in-every-branch-of-life/" target="_blank" rel="noopener">Serpentine — James Barnor in his own words ↗</a>
+    <a href="https://dia.org/jamesbarnor" target="_blank" rel="noopener">Detroit Institute of Arts — Accra/London retrospective ↗</a>
+    <a href="https://autograph.org.uk/online-galleries/ever-young-the-photography-of-james-barnor" target="_blank" rel="noopener">Autograph — Ever Young online gallery ↗</a>
+    <a href="https://fomu.be/en/watch-read/interview-james-barnor" target="_blank" rel="noopener">FOMU Antwerp — interview and archive ↗</a>
+    <a href="https://www.worldphoto.org/blogs/05-11-26/10-things-know-about-james-barnor-outstanding-contribution-photography-2027" target="_blank" rel="noopener">World Photography Organisation — 2027 recognition ↗</a>
+    <a href="https://www.graphic.com.gh/features/features/people-and-places-james-banor-the-ever-young.html" target="_blank" rel="noopener">Graphic Online — People and Places: James Barnor ↗</a>
+  </div>
+</div></section>
+</main>
+<footer><div class="wrap footer-inner"><div><div class="footer-title">JAMES BARNOR<span style="color:#c4a36b">.</span></div><div class="mono" style="color:#b8a27b;margin-top:8px">A LIFE BEHIND THE LENS</div></div><div class="footer-note">An independent educational tribute to the life and work of Ghanaian photographer James Barnor. All photographs remain the property of their respective rights holders. Please consult the credited institutions for reproduction permissions.</div></div></footer>
+
+<script>
+const nav=document.getElementById('nav');
+document.getElementById('menu').addEventListener('click',()=>nav.classList.toggle('open'));
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+const filters=document.querySelectorAll('.filter');
+const cards=document.querySelectorAll('.gallery-card');
+filters.forEach(btn=>btn.addEventListener('click',()=>{
+  filters.forEach(b=>b.classList.remove('active'));btn.classList.add('active');
+  const value=btn.dataset.filter;
+  cards.forEach(card=>card.classList.toggle('hidden',value!=='all'&&card.dataset.period!==value));
+}));
+const modal=document.getElementById('modal');
+const modalImg=document.getElementById('modalImg');
+function closeModal(){modal.classList.remove('open');modalImg.src='';}
+cards.forEach(card=>card.addEventListener('click',()=>{
+  const img=card.querySelector('img');
+  modalImg.src=img.src;modalImg.alt=img.alt;
+  document.getElementById('modalTitle').textContent=card.dataset.title;
+  document.getElementById('modalYear').textContent=card.dataset.year;
+  document.getElementById('modalDesc').textContent=card.dataset.desc;
+  document.getElementById('modalCredit').textContent='IMAGE CREDIT: '+card.dataset.credit;
+  modal.classList.add('open');
+}));
+document.getElementById('closeModal').addEventListener('click',closeModal);
+modal.addEventListener('click',e=>{if(e.target===modal)closeModal();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
+
+// Premium motion, reveal-on-scroll and page progress
+const topbar=document.querySelector('.topbar');
+const progress=document.getElementById('scrollProgress');
+const backTop=document.getElementById('backTop');
+function updateScrollUI(){
+  const max=document.documentElement.scrollHeight-window.innerHeight;
+  const pct=max>0?(window.scrollY/max)*100:0;
+  progress.style.width=pct+'%';
+  topbar.classList.toggle('scrolled',window.scrollY>35);
+  backTop.classList.toggle('show',window.scrollY>650);
+}
+window.addEventListener('scroll',updateScrollUI,{passive:true});updateScrollUI();
+backTop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+const revealTargets=document.querySelectorAll('section .section-head, .bio-grid, .event, .achievement, .gallery-card, .honour, .legacy-grid, .source-list a');
+revealTargets.forEach(el=>el.classList.add('reveal'));
+if('IntersectionObserver' in window){
+  const revealObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{
+    if(entry.isIntersecting){entry.target.classList.add('visible');revealObserver.unobserve(entry.target);}
+  }),{threshold:.12,rootMargin:'0px 0px -35px 0px'});
+  revealTargets.forEach(el=>revealObserver.observe(el));
+}else{revealTargets.forEach(el=>el.classList.add('visible'));}
+
+</script>
+</body>
+</html>
